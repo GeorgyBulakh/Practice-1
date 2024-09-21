@@ -4,7 +4,15 @@ fun main() {
     val num2 = readln().toInt();
     val num3 = readln().toInt();
 
-    val min = minOf(num1, num2, num3);
+    var min = 0;
+
+    if (num1 <= num2 && num1 <= num3) {
+        min = num1;
+    } else if (num2 <= num1 && num2 <= num3) {
+        min = num2;
+    } else {
+        min = num3;
+    }
 
     println("Minimum number: $min");
 }
